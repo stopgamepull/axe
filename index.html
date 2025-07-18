@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bucket Intelligence Model</title>
+    <title>Axe Intelligence Model</title>
     <link rel="shortcut icon" href="images/fav.png" type="image/png">
     <style>
         :root {
@@ -54,7 +54,7 @@
             height: 16px;
         }
         
-        #Bucket-container {
+        #Axe-container {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -65,7 +65,7 @@
 
         }
         
-        #Bucket-img {
+        #Axe-img {
           width: 400px;
     height: 340px;
             object-fit: contain;
@@ -74,11 +74,11 @@
             transition: transform 0.3s;
         }
         
-        #Bucket-img:hover {
+        #Axe-img:hover {
             transform: scale(1.05);
         }
         
-        #Bucket-chat {
+        #Axe-chat {
             background-color: var(--black);
             color: var(--white);
             border: 2px solid var(--black);
@@ -160,8 +160,8 @@
 </head>
 <body>
     <header>
-        <h1>Bucket Intelligence Model</h1>
-        <a href="https://x.com/bucket_model" class="x-link" target="_blank">
+        <h1>Axe Intelligence Model</h1>
+        <a href="https://x.com/AI_axe_model" class="x-link" target="_blank">
             <svg class="x-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
             </svg>
@@ -171,20 +171,20 @@
     
     <p style="text-align: center; margin-bottom: 30px;">Something you did not expect</p>
     
-    <div id="Bucket-container">
-        <img id="Bucket-img" src="images/fav.png" alt="Angry Bucket">
-        <div id="Bucket-chat">
-            > Are you seriously talking to a fucking Bucket? 
+    <div id="Axe-container">
+        <img id="Axe-img" src="images/fav.png" alt="Angry Axe">
+        <div id="Axe-chat">
+            > Are you seriously talking to a fucking Axe? 
         </div>
     </div>
     
     <div id="input-container">
         <input type="text" id="user-input" placeholder="Type your message here... (not that I care)">
-        <button onclick="talkToBucket()">ASK Bucket</button>
+        <button onclick="talkToAxe()">ASK Axe</button>
     </div>
     
     <footer>
-        Warning: you might be a schizo talkin to a Bucket
+        Warning: you might be a schizo talkin to a Axe
     </footer>
     
     <script>
@@ -211,34 +211,34 @@
             "Congratulations! You found the most sarcastic kitchen appliance"
         ];
         
-        function talkToBucket() {
+        function talkToAxe() {
             const input = document.getElementById('user-input').value;
-            const Bucket = document.getElementById('Bucket-chat');
-            const BucketImg = document.getElementById('Bucket-img');
+            const Axe = document.getElementById('Axe-chat');
+            const AxeImg = document.getElementById('Axe-img');
             
             // Add typing animation
-            Bucket.innerHTML = "> _Typing";
-            Bucket.classList.add('typing');
-            BucketImg.src = "./fav.png"; // "active" Bucket
+            Axe.innerHTML = "> _Typing";
+            Axe.classList.add('typing');
+            AxeImg.src = "./fav.png"; // "active" Axe
             
             setTimeout(() => {
                 if (!input.trim()) {
-                    Bucket.innerHTML = "> Wow. Silence. How original.";
+                    Axe.innerHTML = "> Wow. Silence. How original.";
                 } else {
-                    Bucket.innerHTML = `> ${responses[Math.floor(Math.random() * responses.length)]}`;
+                    Axe.innerHTML = `> ${responses[Math.floor(Math.random() * responses.length)]}`;
                 }
                 
                 document.getElementById('user-input').value = '';
-                Bucket.classList.remove('typing');
+                Axe.classList.remove('typing');
                 
-                // Random chance to show different Bucket states
+                // Random chance to show different Axe states
                 const randomState = Math.random();
                 if (randomState > 0.8) {
-                    BucketImg.src = "./fav.png"; // angry
+                    AxeImg.src = "./fav.png"; // angry
                 } else if (randomState > 0.6) {
-                    BucketImg.src = "./fav.png"; // happy
+                    AxeImg.src = "./fav.png"; // happy
                 } else {
-                    BucketImg.src = "./fav.png"; // normal
+                    AxeImg.src = "./fav.png"; // normal
                 }
                 
             }, 800 + Math.random() * 1500); // Random response delay
@@ -247,7 +247,7 @@
         // Send on Enter
         document.getElementById('user-input').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
-                talkToBucket();
+                talkToAxe();
             }
         });
     </script>
